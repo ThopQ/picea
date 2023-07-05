@@ -35,7 +35,7 @@ const styles = computed(() => {
 <template>
   <svg
     aria-hidden="true"
-    class="pv-loader h-5 w-5 animate-spin"
+    class="p-loader h-5 w-5 animate-spin"
     :class="[styles]"
     viewBox="0 0 100 101"
     fill="none"

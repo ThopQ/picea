@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import PVTabsButton from "./PVTabsButton.vue";
+import PTabsButton from "./PTabsButton.vue";
 
 type TabItem = {
   title: string;
@@ -44,12 +44,12 @@ function changeTab(index: number) {
     class="flex items-center justify-start gap-1 rounded-lg bg-neutral-100 p-1"
     :class="[width]"
   >
-    <PVTabsButton
+    <PTabsButton
       v-for="(tab, index) in props.items"
       :active="activeTabIndex === index"
       @click="changeTab(index)"
     >
       {{ tab.title }}
-    </PVTabsButton>
+    </PTabsButton>
   </div>
 </template>

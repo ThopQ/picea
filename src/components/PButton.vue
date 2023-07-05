@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import PVLoader from "./PVLoader.vue";
+import PLoader from "./PLoader.vue";
 
 const props = defineProps({
   type: {
@@ -94,7 +94,7 @@ const styles = computed(() => {
 <template>
   <button
     :type="props.type"
-    class="pv-button inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium tracking-wide"
+    class="p-button inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium tracking-wide"
     :class="[
       styles,
       { 'cursor-not-allowed': props.disabled, 'w-full': props.block },
@@ -102,7 +102,7 @@ const styles = computed(() => {
     :disabled="props.disabled"
     @click="emits('click')"
   >
-    <PVLoader v-if="props.loading" :color="props.color" />
+    <PLoader v-if="props.loading" :color="props.color" />
 
     <slot />
   </button>
