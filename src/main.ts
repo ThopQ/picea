@@ -1,5 +1,9 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import "./style.css";
 
-createApp(App).mount('#app')
+import PButton from "./components/PButton.vue";
+import PLoader from "./components/PLoader.vue";
+import PCard from "./components/PCard.vue";
+import PTabs from "./components/PTabs.vue";
+import PTabsButton from "./components/PTabsButton.vue";
+
+export { PButton, PLoader, PCard, PTabs, PTabsButton };
