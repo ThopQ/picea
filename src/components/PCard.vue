@@ -51,7 +51,7 @@ const styles = computed(() => {
 <template>
   <div
     :class="[styles, { 'md:flex-row': props.horizontal }]"
-    class="flex flex-col overflow-hidden rounded-lg"
+    class="p-card flex flex-col overflow-hidden rounded-lg"
   >
     <div
       v-if="$slots['media']"

@@ -50,7 +50,7 @@ function changeTab(index: number) {
 
 <template>
   <div
-    class="flex items-center justify-start gap-1 rounded-lg bg-neutral-100 p-1"
+    class="p-tabs flex items-center justify-start gap-1 rounded-lg bg-neutral-100 p-1"
     :class="[width]"
   >
     <PTabsButton
