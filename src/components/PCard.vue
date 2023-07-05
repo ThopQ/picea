@@ -21,10 +21,19 @@ const props = defineProps({
 });
 
 const width = computed(() => {
-  if (props.maxWidth != "full") {
-    return "max-w-" + props.maxWidth;
-  } else {
-    return "w-full";
+  switch (props.maxWidth) {
+    case "xs":
+      return "max-w-xs";
+    case "sm":
+      return "max-w-sm";
+    case "md":
+      return "max-w-md";
+    case "lg":
+      return "max-w-lg";
+    case "xl":
+      return "max-w-xl";
+    case "full":
+      return "w-full";
   }
 });
 
