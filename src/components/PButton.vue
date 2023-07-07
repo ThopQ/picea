@@ -94,11 +94,8 @@ const styles = computed(() => {
 <template>
   <button
     :type="props.type"
-    class="p-button inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium tracking-wide"
-    :class="[
-      styles,
-      { 'cursor-not-allowed': props.disabled, 'w-full': props.block },
-    ]"
+    class="p-button inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium tracking-wide disabled:cursor-not-allowed disabled:opacity-50"
+    :class="[styles, { 'w-full': props.block }]"
     :disabled="props.disabled"
     @click="emits('click')"
   >
