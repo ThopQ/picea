@@ -10,6 +10,10 @@ const props = defineProps({
     type: String as () => "text" | "number" | "email" | "password",
     default: "text",
   },
+  name: {
+    type: String,
+    default: "p-input",
+  },
   placeholder: {
     type: String,
     default: "",
@@ -57,6 +61,7 @@ const styles = computed(() => {
     :type="props.type"
     class="p-input ring-offset-background flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
     :class="[styles]"
+    :name="props.name"
     :placeholder="props.placeholder"
     :value="props.modelValue"
     @input="updateValue"

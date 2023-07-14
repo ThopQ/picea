@@ -6,6 +6,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  name: {
+    type: String,
+    default: "p-switch",
+  },
   label: {
     type: String,
     default: "",
@@ -50,7 +54,12 @@ const clickSwitchButton = () => {
 
 <template>
   <div class="flex items-center justify-start gap-2">
-    <input type="checkbox" name="switch" class="hidden" :checked="switchOn" />
+    <input
+      type="checkbox"
+      :name="props.name"
+      class="hidden"
+      :checked="switchOn"
+    />
 
     <button
       ref="switchButton"
@@ -69,6 +78,7 @@ const clickSwitchButton = () => {
       @click="clickSwitchButton"
       :class="labelClass"
       class="cursor-pointer select-none text-sm"
+      :for="props.name"
     >
       {{ props.label }}
     </label>

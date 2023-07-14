@@ -9,6 +9,10 @@ const props = defineProps({
   modelValue: {
     type: [String, Number],
   },
+  name: {
+    type: String,
+    default: "p-radio-group",
+  },
   title: {
     type: String,
     default: "",
@@ -50,7 +54,7 @@ function selectOption(option: RadioGroupOption) {
     >
       <input
         type="radio"
-        name="p-radio-group"
+        :name="props.name"
         :id="`p-radio-group[${index}]`"
         :value="option.value"
         :checked="modelValue === option.value"
