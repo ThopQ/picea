@@ -15,7 +15,7 @@ const props = defineProps({
 const emits = defineEmits(["update:model-value"]);
 
 const switchOn = ref<boolean>(props.modelValue);
-const switchButton = ref<HTMLInputElement | null>(null);
+const switchButton = ref<HTMLButtonElement | null>(null);
 
 const switchClass = computed(() => {
   return `relative inline-flex h-6 py-0.5  focus:outline-none rounded-full w-10 ${
