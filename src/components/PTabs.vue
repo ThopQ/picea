@@ -40,7 +40,7 @@ const width = computed(() => {
   }
 });
 
-const activeTabIndex = ref(props.modelValue);
+const activeTabIndex = ref<Number>(props.modelValue);
 
 function changeTab(index: number) {
   activeTabIndex.value = index;
