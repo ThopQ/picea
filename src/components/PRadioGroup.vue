@@ -23,7 +23,12 @@ const props = defineProps({
   },
 });
 
-const emits = defineEmits(["update:model-value"]);
+const emits = defineEmits(["update:model-value", "change"]);
+
+function selectOption(option: RadioGroupOption) {
+  emits("update:model-value", option.value);
+  emits("change", option);
+}
 </script>
 
 <template>
@@ -41,7 +46,7 @@ const emits = defineEmits(["update:model-value"]);
     <label
       v-for="(option, index) in props.options"
       class="flex flex-1 items-start space-x-3 rounded-md border border-neutral-200/70 bg-white p-5 shadow-sm hover:bg-gray-50"
-      @click="emits('update:model-value', option.value)"
+      @click="selectOption(option)"
     >
       <input
         type="radio"
