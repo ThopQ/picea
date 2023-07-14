@@ -9,7 +9,7 @@ const props = defineProps({
 
 const emits = defineEmits(["click"]);
 
-const hover = ref(false);
+const hover = ref<boolean>(false);
 </script>
 
 <template>
